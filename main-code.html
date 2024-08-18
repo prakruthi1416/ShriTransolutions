@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap' rel='stylesheet'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <title>Shri Transolutions</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Times new roman', sans-serif;
+             background-color:#F2EBE5;
+            background-size: 100%;
+        }
+
+        header {
+            background-color: #64766A;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: #94A7AE;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .content-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .content-box {
+            width: 30%;
+            padding: 20px;
+            margin: 10px;
+            border: 2px solid #ddd;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            overflow: hidden;
+            position: relative;
+            background-color: #F2EBE5;
+            background-size: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+			color:#647295;
+        }
+
+        .content-box:hover {
+            transform: scale(1.05);
+        }
+		
+        .full-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+			
+        }
+
+        .full-screen-content {
+            width: 60%;
+            padding: 30px;
+            background-color: #F4F2F3;
+            border-radius: 10px;
+            position: relative;
+			border:2px solid #000;
+			
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+			font-size:40px;
+			color:#712E1E;
+			 font-weight: 50%;
+			 
+        }
+
+        .full-screen-content p {
+            display: none;
+			text-align:center;
+			
+        }
+
+        .full-screen-content.active p {
+            display: block;
+        }
+		
+<!--TABLE-->
+        .full-screen-content table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+            background-color: blue;
+        }
+
+        .full-screen-content th ,
+        .full-screen-content td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+            background-color:#F4F2F3;
+            color: black;
+        }
+
+        .full-screen-content th:first-child,
+		font-size:30%;
+        .full-screen-content td:first-child {
+            border-left: none;
+			
+        }
+
+        .full-screen-content th:last-child,
+        .full-screen-content td:last-child {
+            border-right: none;
+        }
+		 .content-box:hover {
+            transform: scale(1.05);
+        }
+ 
+	 .full-screen-content {
+            width: 100%;
+			height:100%;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            position: relative;
+            text-align: center;
+            margin: auto;
+            font-size: 20px;
+            max-height: 80vh; /* Set maximum height as 80% of the viewport height */
+            overflow-y: auto; /* Enable vertical scrolling */
+        }
+
+        .image-container {
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+            animation: fadeIn 1s ease-in-out; /* Add a fade-in animation */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+      .full-screen-content th {
+        font-size: 20px;
+    }  
+    .back-btn {
+    font-size: 30px; /* Adjust the font size as needed */
+    cursor: pointer;
+    position: bottom;
+    bottom: 20px;
+    left: 20px;
+	background-color:#F2EBE5;
+	color:#2B262D;
+	font:bold;
+}
+.home-box{
+ width: 30%;
+            padding: 20px;
+            margin: 10px;
+            border: 2px solid #ddd;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            overflow: hidden;
+            position: relative;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+			color:black;
+			background-image:url('home.png');
+			font-size:20px;
+}  
+.aboutus-box{
+ width: 30%;
+            padding: 20px;
+            margin: 10px;
+            border: 2px solid #ddd;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            overflow: hidden;
+            position: relative;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+			color:white;
+			background-image:url('aboutus.png');
+			font-size:20px;
+}  
+.activity-box{
+ width: 30%;
+            padding: 20px;
+            margin: 10px;
+            border: 2px solid #ddd;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            overflow: hidden;
+            position: relative;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+			color:white;
+			background-image:url('activity.png');
+			font-size:20px;
+}  
+.clients-box{
+ width: 30%;
+            padding: 20px;
+            margin: 10px;
+            border: 2px solid #ddd;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            overflow: hidden;
+            position: relative;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+			color:black;
+			background-image:url('clients.png');
+			font-size:20px;
+}  	
+.work-box{
+ width: 30%;
+            padding: 20px;
+            margin: 10px;
+            border: 2px solid #ddd;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            overflow: hidden;
+            position: relative;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+			color:black;
+			background-image:url('work.png');
+			font-size:20px;
+}  
+.contactus-box{
+ width: 30%;
+            padding: 20px;
+            margin: 10px;
+            border: 2px solid #ddd;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            overflow: hidden;
+            position: relative;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+			color:white;
+			background-image:url('contactus.jpg');
+			font-size:20px;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Apply the animation to the specified boxes */
+.home-box:hover,
+.aboutus-box:hover,
+.work-box:hover,
+.clients-box:hover,
+.contactus-box:hover,
+.activity-box:hover {
+    animation: bounce 1s ease-in-out; /* Adjust the duration and easing as needed */
+}
+/* Add the following CSS code to your existing styles */
+
+/* Define a fly-in animation */
+@keyframes flyIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Apply the fly-in animation to the container holding the specified boxes */
+.content-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    animation: flyIn 1s ease-out; /* Adjust the duration and easing as needed */
+}
+  
+    </style>
+</head>
+
+<body>
+
+    <header>
+		<img src="Logo1.png" width=15%>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showContent('home')"></a>
+        <a href="#" onclick="showContent('about')"></a>
+        <a href="#" onclick="showContent('activities')"></a>
+        <a href="#" onclick="showContent('clients')"></a>
+        <a href="#" onclick="showContent('works')"></a>
+        <a href="#" onclick="showContent('contact')"></a>
+		
+    </nav>
+
+    <div class="content-section">
+        <div class="home-box"  onclick="openHome()">
+            <h2>Home</h2>
+            <div class="back-btn"></div>
+			
+        </div>
+
+        <div class="aboutus-box" onclick="openAbout()" >
+            <h2>About</h2>
+            <div class="back-btn"></div>
+        </div>
+
+        <div class="activity-box" onclick="openActivity()">
+            <h2>Activities/Services</h2>
+            <div class="back-btn"></div>
+        </div>
+
+        <div class="clients-box" onclick="openClients()">
+            <h2>Clients</h2>
+            <div class="back-btn"></div>
+        </div>
+
+        <div class="work-box" onclick="openServices()">
+            <h2>Our Works</h2>
+            <div class="back-btn"></div>
+        </div>
+        <div class="contactus-box" onclick="openContact()">
+            <h2>Contact Us</h2>
+            <div class="back-btn"></div>
+        </div>
+       
+       
+    
+
+
+   
+    
+
+    <script>
+        function showContent(contentId) {
+            console.log(`Showing content for ${contentId}`);
+        }
+
+        function showFullScreenContent(contentId) {
+            document.getElementById(contentId).style.display = 'flex';
+        }
+
+        function closeFullScreenContent() {
+            document.querySelectorAll('.full-screen').forEach(element => {
+                element.style.display = 'none';
+            });
+        }
+		function goBack() {
+        closeFullScreenContent();
+        
+        showFullScreenContent('content-section');
+        console.log("Going back ");
+    }
+	function openHome() {
+        // Redirect to home.html when the content box is clicked
+        window.location.href = 'home.html';
+    }
+
+    function closeFullScreenContent() {
+        // Add your logic to close the full-screen content
+    }
+
+    function goBack() {
+        // Add your logic to go back
+    }
+	
+	function openAbout() {
+            window.location.href = "about.html";
+        }
+		function openActivity(){
+		    window.location.href ="activity.html";
+	}	
+function openClients(){
+		    window.location.href ="clients.html";
+	}	
+function openServices(){
+		    window.location.href ="works.html";
+	}	
+	function openContact(){
+		    window.location.href ="contact.html";
+	}	
+    </script>
+
+</body>
+
+</html>
